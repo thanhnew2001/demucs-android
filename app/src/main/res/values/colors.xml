@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme colors -->
+    <color name="colorBackground">#e0ffff</color>
+    <color name="colorPrimaryText">#c71585</color>
+    <color name="colorHeader">#8b008b</color>
+    <color name="colorLink">#8b008b</color>
+    <color name="colorLinkHover">#c71585</color>
+    <color name="colorGoldPro">#ffd700</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorCyan">#00FFFF</color>
+    <color name="colorOrange">#FFA500</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorPink">#FF4DFF</color>
+    <color name="colorLime">#00FF00</color>
+</resources>

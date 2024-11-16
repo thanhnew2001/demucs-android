@@ -1,0 +1,127 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title TextView -->
+        <TextView
+            android:id="@+id/tvCustomMix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CUSTOM MIX"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp" />
+
+        <!-- Stem Description TextView -->
+        <TextView
+            android:id="@+id/tvStemDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Playback and export a custom mix from last demix job"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp" />
+
+        <!-- Stem Status TextView -->
+        <TextView
+            android:id="@+id/tvStemStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stem status:"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp" />
+
+        <!-- Checkbox Section -->
+        <LinearLayout
+            android:id="@+id/checkboxContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Button Section for Custom Mix and Save -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnCreateMix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:alpha="0.5"
+                android:text="Create mix" />
+
+            <Button
+                android:id="@+id/btnSaveMix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save to file"
+                android:enabled="false"
+                android:alpha="0.5"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Create Mix TextView -->
+        <TextView
+            android:id="@+id/tvMixStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mix:"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp" />
+
+        <!-- Playback Controls Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btnStemStartPlayback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:alpha="0.5"
+                android:text="Play" />
+
+            <Button
+                android:id="@+id/btnStemStopPlayback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:alpha="0.5"
+                android:text="Stop"
+                android:layout_marginStart="16dp" />
+
+            <CheckBox
+                android:id="@+id/chkLoop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:alpha="0.5"
+                android:text="Loop"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- SeekBar for Playback -->
+        <SeekBar
+            android:id="@+id/seekBarPlayback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

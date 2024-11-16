@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvInputs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DEMIXER INPUTS"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:id="@+id/musicInputLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="start"
+        app:layout_constraintTop_toBottomOf="@id/tvInputs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="?android:attr/buttonBarStyle"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/tvMusicInputs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Input:"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:layout_marginStart="16dp" />
+
+        <Button
+            android:id="@+id/btnUploadAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
+            android:backgroundTint="@color/colorHeader"
+            android:textColor="@color/colorWhite"
+            android:text="File" />
+
+        <Button
+            android:id="@+id/btnRecordControls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
+            android:backgroundTint="@color/colorHeader"
+            android:textColor="@color/colorWhite"
+            android:enabled="true"
+            android:alpha="1.0"
+            android:text="Record" />
+
+        <Button
+            android:id="@+id/btnAppCaptureControls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
+            android:backgroundTint="@color/colorHeader"
+            android:textColor="@color/colorWhite"
+            android:enabled="true"
+            android:alpha="1.0"
+            android:text="Capture"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DEMIXER JOB"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        app:layout_constraintTop_toBottomOf="@id/musicInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <View
+        android:id="@+id/startRuler"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@color/colorHeader"
+        app:layout_constraintTop_toBottomOf="@id/tvStart" />
+
+    <LinearLayout
+        android:id="@+id/demixControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="?android:attr/buttonBarStyle"
+        android:layout_marginTop="16dp">
+
+    <Button
+        android:id="@+id/btnStartJob"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Start"
+        style="?android:attr/buttonBarButtonStyle"
+        android:backgroundTint="@color/colorHeader"
+        android:textColor="@color/colorWhite"
+        android:layout_marginStart="8dp"/>
+
+    <Button
+        android:id="@+id/btnStopJob"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Stop"
+        android:enabled="false"
+        style="?android:attr/buttonBarButtonStyle"
+        android:backgroundTint="@color/colorHeader"
+        android:textColor="@color/colorWhite"
+        android:layout_marginStart="8dp"/>
+
+    <Button
+        android:id="@+id/btnClearLogs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/buttonBarButtonStyle"
+        android:backgroundTint="@color/colorHeader"
+        android:textColor="@color/colorWhite"
+        android:text="Clear logs"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/demixControls">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="Progress %: "
+            android:layout_marginStart="24dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressBarJob"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="24dp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/terminalLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        app:layout_constraintTop_toBottomOf="@id/progressLayout"
+        app:layout_constraintBottom_toTopOf="@id/stemsOutputs">
+
+        <TextView
+            android:id="@+id/tvSelectedInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:textColor="@color/colorCyan"
+            android:fontFamily="monospace"
+            android:textSize="14sp"
+            android:paddingTop="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="0dp"
+            android:text="No input selected"/>
+
+        <TextView
+            android:id="@+id/tvStemOutputs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:textColor="@color/colorPink"
+            android:fontFamily="monospace"
+            android:textSize="14sp"
+            android:paddingTop="0dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            android:layout_below="@id/tvSelectedInput"
+            android:text="No output stems"/>
+
+        <View
+            android:id="@+id/logSepRuler"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_below="@id/tvStemOutputs" />
+
+        <ScrollView
+            android:id="@+id/scrollViewLogs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:layout_below="@id/logSepRuler">
+
+            <TextView
+                android:id="@+id/tvTerminalLogs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/black"
+                android:textColor="@color/colorLime"
+                android:fontFamily="monospace"
+                android:textSize="13sp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="0dp"
+                android:scrollbars="vertical"/>
+        </ScrollView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/stemsOutputs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/terminalLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="?android:attr/buttonBarStyle"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnStemOutputs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:backgroundTint="@color/colorHeader"
+            android:textColor="@color/colorWhite"
+            android:enabled="false"
+            android:alpha="0.5"
+            android:text="Copy stems"/>
+
+        <Button
+            android:id="@+id/btnCustomMix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:backgroundTint="@color/colorHeader"
+            android:textColor="@color/colorWhite"
+            android:enabled="true"
+            android:alpha="1.0"
+            android:text="Play/custom mix"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.DemucsAndroid" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="colorPrimary">@color/colorHeader</item>
+        <item name="colorPrimaryDark">@color/colorHeader</item>
+        <item name="colorAccent">@color/colorLink</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:fontFamily">monospace</item>
+    </style>
+
+    <style name="Theme.DemucsAndroid.Header">
+        <item name="android:textColor">@color/colorHeader</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Theme.DemucsAndroid.Link" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorLink</item>
+    </style>
+
+    <style name="Theme.DemucsAndroid.LinkHover" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorLinkHover</item>
+    </style>
+</resources>
