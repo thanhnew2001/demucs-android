@@ -16,3 +16,11 @@ local.properties
 *.so
 *.aab
 app/release
+# NDK and build artifacts
+.cxx/
+.externalNativeBuild/
+build/
+*.so
+*.o
+*.obj
+~/Library/*
